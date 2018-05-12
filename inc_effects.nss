@@ -26,9 +26,6 @@ int EFFECTS_DoReflexSave(object oCreature, int nDC, int nSaveType=SAVING_THROW_T
 // Replacement to WillSave for more controllable methods.
 int EFFECTS_DoWillSave(object oCreature, int nDC, int nSaveType=SAVING_THROW_TYPE_NONE, object oSaveVersus=OBJECT_SELF);
 
-// Instantly remove an effect.
-int EFFECTS_InstantlyRemoveEffects(object oCreature, int nDurationType, int nEffectType = , string sTag = "");
-
 //::///////////////////////////////////////////////
 //:: Main Body
 //::///////////////////////////////////////////////
@@ -112,7 +109,6 @@ void EFFECTS_ModifyEffect(effect eNewEffect, int nNewDurationType = DURATION_TYP
     }
 }
 
-
 int EFFECTS_DoFortitudeSave(object oCreature, int nDC, int nSaveType=SAVING_THROW_TYPE_NONE, object oSaveVersus=OBJECT_SELF)
 {
     // As per usual command, 0 if failed, 1 if succeeded, 2 if immune.
@@ -133,5 +129,6 @@ int EFFECTS_DoWillSave(object oCreature, int nDC, int nSaveType=SAVING_THROW_TYP
     int nResult = WillSave(oCreature, nDC, nSaveType, oSaveVersus);
     return nResult;
 }
+
 
 
